@@ -13,9 +13,9 @@ axios.interceptors.response.use(
     return response;
   },
   (error) => {
-    if (error.response.status !== 401) {
-      console.log("error status is not 401");
-    } else console.log("Error status is 401");
+    if (error.response.status === 401) {
+      console.log("error status is  401");
+    } else console.log("Error status is not 401");
   }
 );
 
